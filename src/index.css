@@ -1,0 +1,334 @@
+@import "tailwindcss";
+
+
+
+body {
+    font-family: 'Mono';
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/img/freepik__black-background-featuring-a-dotted-pattern-of-sma__65962.png');
+    background-size: repeat;
+    background-position: center;
+    background-repeat: repeat;  
+    position: absolute;
+    color: white;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Neon text */
+.neon-full {
+    color: white;
+    -webkit-text-stroke: #000000;
+    text-shadow: 0 0 5px #5eead4, 0 0 30px #5eead4, 0 0 35px #5eead4;
+}
+
+.neon-full:hover {
+    color: white;
+    -webkit-text-stroke:  #000000;
+    text-shadow: 0 0 5px #5e2d89, 0 0 30px #5e2d89, 0 0 35px #5e2d89;
+}
+
+.neon-full-unhovered {
+    color: white;
+    -webkit-text-stroke: 0px #000000;
+    text-shadow: 0 0 5px #5eead4, 0 0 30px #5eead4, 0 0 35px #5eead4;
+}
+
+/* Image */
+.image-cv {
+    object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+
+
+/* projects */
+.list-projects{
+    display:grid;
+    grid-template-columns: 3fr ;
+    border: solid 2px white;
+    border-radius: 10px ;
+    padding: 10px;
+    margin: 10px;   
+}
+
+.img-projects{
+    object-fit: cover;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.title-projects-neon{
+    font-size: 4rem;
+    color: white;
+}
+
+/*Formulario*/
+.form-contact label{
+    color: white;
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+
+@keyframes lightning-border {
+    0% {
+      border-image-source: linear-gradient(0deg, transparent, rgb(88, 28, 135), transparent);
+    }
+    25% {
+      border-image-source: linear-gradient(90deg, transparent, rgb(88, 28, 135), transparent);
+    }
+    50% {
+      border-image-source: linear-gradient(180deg, transparent, rgb(88, 28, 135), transparent);
+    }
+    75% {
+      border-image-source: linear-gradient(270deg, transparent, rgb(88, 28, 135), transparent);
+    }
+    100% {
+      border-image-source: linear-gradient(360deg, transparent, rgb(88, 28, 135), transparent);
+    }
+  }
+
+.animate-lightning-border{
+        border-width: 5px;
+        border-style: solid;
+        border-image-slice: 1;
+        animation: lightning-border 3s linear infinite;
+        border-radius: 10px;
+}
+
+.animate-lightning-border-hovered:hover{
+    border-width: 5px;
+    border-style: solid;
+    border-image-slice: 1;
+    animation: lightning-border 3s linear infinite;
+    border-radius: 10px;
+}
+
+.animate-lightning-border-skill{
+    border-width: 5px;
+    border-style: solid;
+    border-image-slice: 1;
+    animation: lightning-border 3s linear infinite;
+    border-radius: 10px;
+}
+  
+@media (max-width: 800px) and (min-width: 1400px) {
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 20
+    }
+
+    .image-cv {
+        width: 300px;
+        height: 300px;
+    }
+
+    .infoSection {
+        padding-top: 30px; 
+        margin-top: 0; 
+    }
+
+    .neon-full-unhovered {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .info {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .projects-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .projects-content .title-projects .title-skills {
+        font-size: 1.75rem;
+    }
+
+    .projects-content .info-projects {
+        font-size: 1rem;
+    }
+
+    .projects-content .list-projects {
+        font-size: 0.875rem;
+        padding: 8px;
+        margin: 8px;
+    }
+
+    .projects-content .img-projects {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .coding-gif-pengu{
+        width: auto;
+        height: auto;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 640px) {
+
+    .name-cv {
+        font-size: 3rem;
+    }
+
+    .image-cv {
+        width: 200px;
+        height: 200px;
+    }
+
+    .projects-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .projects-content .title-projects {
+        font-size: 1.5rem;
+    }
+
+    .projects-content .info-projects {
+        font-size: 0.875rem;
+    }
+
+    .projects-content .list-projects {
+        font-size: 0.75rem;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .projects-content .img-projects {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    
+    .coding-gif-pengu{
+        width: auto;
+        height: 50%;
+    }
+}
+
+@media (max-width: 640px) and (min-width: 451px) {
+    .name-cv {
+        font-size: 2.5rem;
+    }
+    .image-cv {
+        width: 300px;
+        height: 300px;
+    }
+
+    
+    .coding-gif-pengu{
+        width: auto;
+        height: 50%;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 450px) {
+
+    .nav-menu {
+        font-size: small;
+    }
+
+    .image-cv {
+        width: 300px;
+        height: 300px;
+    }
+
+    .projects-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .projects-content .title-projects {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .projects-content .info-projects {
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+
+    .projects-content .list-projects {
+        font-size: 0.625rem;
+        padding: 5px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .projects-content .img-projects {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    
+    .coding-gif-pengu{
+        width: auto;
+        height: 50%;
+    }
+
+    .skills-text{
+        font-size: 1rem;
+        color: white;
+    }
+}
+
+@media (max-width: 450px) and (min-width: 201px) {
+
+
+    .name-cv {
+        font-size: 2rem;
+    }
+
+    .infoSection {
+        padding-top: 30px; 
+        margin-top: 0; 
+    }
+
+    .neon-full-unhovered {
+        font-size: 2rem; 
+        font-weight: bold;
+    }
+
+    .info {
+        font-size: 1rem; 
+    }
+
+    .image-cv {
+        width: 200px; 
+        height: 200px;
+    }
+
+    .links {
+        grid-template-columns: 1fr 1fr;
+    }
+    .coding-gif-pengu{
+        width: auto;
+        height: 50%;
+    }
+
+    .skills-text{
+        font-size: 1rem;
+        color: white;
+    }
+}
