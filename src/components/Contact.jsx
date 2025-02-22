@@ -28,7 +28,7 @@ const Contact = () => {
     });
     }
   return (
-    <section className='pt-70 flex flex-col items-center w-full pb-20' id="Contact">
+    <section className='pt-100 flex flex-col items-center w-full pb-20' id="Contact">
       
       <div className='text-center'>
         <p className='text-white font-mono text-xl'>
@@ -53,11 +53,11 @@ const Contact = () => {
           />
             {
                 errors.nombre?.type === "required" ? (
-                    <p className="text-red-500">El nombre es requerido</p>
+                    <p className="text-red-300 neon-full-red">El nombre es requerido</p>
                 ) : errors.nombre?.type === "minLength" ? (
-                    <p className="text-red-500">El nombre debe tener al menos 3 caracteres</p>
+                    <p className="text-red-300 neon-full-red">El nombre debe tener al menos 3 caracteres</p>
                 ) : errors.nombre?.type === "maxLength" ? (
-                    <p className="text-red-500">El nombre no puede tener más de 30 caracteres</p>
+                    <p className="text-red-300 neon-full-red">El nombre no puede tener más de 30 caracteres</p>
                 ) : null
             }
           <label htmlFor="email" className='neon-full-unhovered'>Correo:</label>
@@ -69,9 +69,9 @@ const Contact = () => {
           })}
           />
           {errors.correo?.type === "required" ? (
-            <p className="text-red-500">El correo es requerido</p>
+            <p className="text-red-300 neon-full-red">El correo es requerido</p>
           ) : errors.correo?.type === "pattern" ? (
-            <p className="text-red-500">El correo no es válido</p>
+            <p className="text-red-300 neon-full-red">El correo no es válido</p>
           ) : null}
 
           <label htmlFor="message" className='neon-full-unhovered'>Mensaje:</label>
@@ -84,11 +84,11 @@ const Contact = () => {
           }
           />
             {errors.mensaje?.type === "required" ? (
-                <p className="text-red-500">El mensaje es requerido</p>
+                <p className="text-red-300 neon-full-red">El mensaje es requerido</p>
             ) : errors.mensaje?.type === "minLength" ? (
-                <p className="text-red-500">El mensaje debe tener al menos 5 caracteres</p>
+                <p className="text-red-300 neon-full-red">El mensaje debe tener al menos 5 caracteres</p>
             ) : errors.mensaje?.type === "maxLength" ? (
-                <p className="text-red-500">El mensaje no puede tener más de 1000 caracteres</p>
+                <p className="text-red-300 neon-full-red">El mensaje no puede tener más de 1000 caracteres</p>
             ) : null}
           <button type="submit" className='bg-purple-700 hover:bg-purple-600 text-white font-mono font-bold p-2 rounded-md mt-4'>
             Enviar
